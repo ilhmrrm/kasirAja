@@ -32,7 +32,7 @@ describe('Register Feature', () => {
         homePage.clickRegister()
 
         InvalidRegisPage.fillStoreName()
-        InvalidRegisPage.fillEmail()
+        RegisterPage.fillEmail()
         InvalidRegisPage.regisBtn()
         InvalidRegisPage.errorMessage()
     })
