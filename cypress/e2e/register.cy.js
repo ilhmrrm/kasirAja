@@ -3,11 +3,13 @@ const RegisterPage = require('../support/pages/RegisPage/regisPage')
 const InvalidRegisPage = require('../support/pages/RegisPage/invalidPage')
 
 describe('Register Feature', () => {
-    it('Success Register with valid data', () => {
+    beforeEach(() => {
         homePage.goHomepage()
-
+    
         homePage.clickRegister()
+    })
 
+    it('Success Register with valid data', () => {
         RegisterPage.fillStoreName()
         RegisterPage.fillEmail()
         RegisterPage.fillPassword()
@@ -15,10 +17,6 @@ describe('Register Feature', () => {
     })
 
     it('Failed Register with same data', () => {
-        homePage.goHomepage()
-
-        homePage.clickRegister()
-
         RegisterPage.fillStoreName()
         RegisterPage.fillEmail()
         RegisterPage.fillPassword()
@@ -27,10 +25,6 @@ describe('Register Feature', () => {
     })
 
     it('Failed Register with invalid data', () => {
-        homePage.goHomepage()
-    
-        homePage.clickRegister()
-
         InvalidRegisPage.fillStoreName()
         RegisterPage.fillEmail()
         InvalidRegisPage.regisBtn()
@@ -38,10 +32,6 @@ describe('Register Feature', () => {
     })
 
     it('Failed register with invalid email', () => {
-        homePage.goHomepage()
-
-        homePage.clickRegister()
-
         InvalidRegisPage.fillStoreName()
         InvalidRegisPage.fillEmail()
         RegisterPage.fillPassword()
@@ -50,9 +40,6 @@ describe('Register Feature', () => {
     })
 
     it('Failed register with blank store name', () => {
-        homePage.goHomepage()
-    
-        homePage.clickRegister()
 
         InvalidRegisPage.invalidBlankStore()
         InvalidRegisPage.fillEmail()
