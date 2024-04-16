@@ -3,7 +3,7 @@ const locator = require('../../locators/homePage-locator')
 class HomePage {
 
     async goHomepage() {
-        cy.visit('https://kasiraja.ajikamaludin.id/')
+        cy.visit('/')
     }
     async clickRegister() {
         cy.xpath(locator.dataTestID.regis).click()

@@ -9,7 +9,7 @@ module.exports = {
         storeName: 'Demo Store',
         blankStore: '',
         email: 'demo@gmail.com',
-        invalidEmail: 'demo@'
-        // password: ''
+        invalidEmail: 'demo@',
+        password: ' '
     }
 }

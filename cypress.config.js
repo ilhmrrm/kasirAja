@@ -6,6 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
       // require('cypress-mochawesome-reporter/plugin')(on);
     },
+
+    baseUrl: 'https://kasiraja.ajikamaludin.id/',
     chromeWebSecurity: false
   }
 });

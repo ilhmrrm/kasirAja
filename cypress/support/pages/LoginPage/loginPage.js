@@ -21,6 +21,29 @@ class LoginPage {
             .click()
         cy.wait(1000)
     }
+
+    async blankPassword(){
+        cy.xpath(locator.dataTestID.password)
+            .type(bulkTexts.invalidRegis.password)
+        cy.wait(1000)
+    }
+
+    async errorPassword(){
+        cy.get('.chakra-alert').contains('"password" is not allowed to be empty')
+            .should('be.visible')
+    }
+
+    async wrongPass(){
+        cy.xpath(loginLocator.dataLoginID.wrongPass)
+            .should('be.visible')
+        cy.wait(1000)
+    }
+
+    async blankEmail(){
+        cy.xpath(loginLocator.dataLoginID.emailEmpty)
+            .should('be.visible')
+        cy.wait(1000)
+    }
 }
 
 module.exports = new LoginPage()
