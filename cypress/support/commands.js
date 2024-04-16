@@ -9,7 +9,16 @@
 // ***********************************************
 //
 //
+const homePage = require('../support/pages/RegisPage/homePage')
+const LoginPage = require('../support/pages/LoginPage/loginPage')
+
 // -- This is a parent command --
+Cypress.Commands.add('login', () => {
+    homePage.goHomepage()
+    LoginPage.fillEmail()
+    LoginPage.fillPassword()
+    LoginPage.loginBtn()
+})
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
 //

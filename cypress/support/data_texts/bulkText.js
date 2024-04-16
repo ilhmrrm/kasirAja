@@ -11,5 +11,10 @@ module.exports = {
         email: 'demo@gmail.com',
         invalidEmail: 'demo@',
         password: ' '
+    },
+
+    categories: {
+        nameCategories: 'Makanan',
+        deskripsi: 'main course'
     }
 }
