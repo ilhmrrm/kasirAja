@@ -32,6 +32,18 @@ class CatPage{
             .click()
         cy.wait(1000)
     }
+
+    async nameNotAllowed() {
+        cy.get('.chakra-alert').contains('"name" is not allowed to be empty')
+            .should('be.visible')
+            .wait(1000)
+    }
+
+    async descNotAllowed() {
+        cy.get('.chakra-alert').contains('"description" is not allowed to be empty')
+            .should('be.visible')
+            .wait(1000)
+    }
 }
 
 module.exports = new CatPage()
