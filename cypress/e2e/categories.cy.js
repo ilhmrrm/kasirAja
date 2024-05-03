@@ -1,6 +1,7 @@
 import('../support/commands.js');
 const CatPage = require('../support/pages/CategoriesPage/catPage')
-describe('Categories Functionality', () => {
+
+describe('Add Categories Functionality', () => {
     beforeEach(() => {
         cy.login()
         CatPage.cateBtn()
@@ -19,8 +20,24 @@ describe('Categories Functionality', () => {
         CatPage.nameNotAllowed()
     })
 
-    it.only("Create New Catergories Without Desc", () => {
+    it("Create New Catergories Without Desc", () => {
         CatPage.fillFormName()
         CatPage.saveBtn()
+    })
+
+    it("Create New Categories fill form blank", () => {
+        CatPage.saveBtn()
+        CatPage.nameNotAllowed()
+    })
+})
+
+describe('Delete Categories Functionality', () => {
+    beforeEach(() => {
+        cy.login()
+        CatPage.cateBtn()
+    })
+
+    it.only('Delete Categories', () => {
+        
     })
 })
