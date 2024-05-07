@@ -7,6 +7,7 @@ module.exports = {
         addCat: '//*[@id="root"]/div/div/div[2]/div[2]/div[2]/a',
         msgSuccess: '//*[@id="1"]',
         optionMenu: '//*[@id="menu-button-37"]',
-        delOption: '//*[@id="menu-list-37-menuitem-39"]'
+        delOption: '//*[@id="menu-list-37-menuitem-39"]',
+        delBtn: '//*[@id="chakra-modal-7"]/footer/button[2]'
     }
 }

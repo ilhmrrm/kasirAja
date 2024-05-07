@@ -44,6 +44,16 @@ class CatPage{
             .should('be.visible')
             .wait(1000)
     }
+
+    async delCategories(){
+        cy.get('#menu-button-21')
+            .click()
+        cy.get('#menu-list-21-menuitem-23')
+            .click()
+        cy.get('.css-n45e6f')
+            .click()
+            .wait(1000)
+    }
 }
 
 module.exports = new CatPage()

@@ -38,6 +38,6 @@ describe('Delete Categories Functionality', () => {
     })
 
     it.only('Delete Categories', () => {
-        
+        CatPage.delCategories()
     })
 })
